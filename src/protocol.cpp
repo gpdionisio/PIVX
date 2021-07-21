@@ -226,3 +226,27 @@ const std::vector<std::string>& getAllNetMessageTypes()
 {
     return allNetMessageTypesVec;
 }
+
+const std::vector<std::string>& getTierTwoNetMessageTypes()
+{
+    // Note: keep this updated with allNetMessageTypes
+    const static std::vector<std::string> allTierTwoMessageTypesVec {
+            NetMsgType::SPORK,
+            NetMsgType::MNWINNER,
+            "mnodescanerr",
+            NetMsgType::BUDGETVOTE,
+            NetMsgType::BUDGETPROPOSAL,
+            NetMsgType::FINALBUDGET,
+            NetMsgType::FINALBUDGETVOTE,
+            "mnq",
+            NetMsgType::MNBROADCAST,
+            NetMsgType::MNPING,
+            "dstx",  // deprecated
+            NetMsgType::GETMNWINNERS,
+            NetMsgType::GETMNLIST,
+            NetMsgType::BUDGETVOTESYNC,
+            NetMsgType::GETSPORKS,
+            NetMsgType::SYNCSTATUSCOUNT
+    };
+    return allTierTwoMessageTypesVec;
+}
